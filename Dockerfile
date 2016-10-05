@@ -18,7 +18,10 @@ RUN apt-get -y update && \
 
 RUN apt-get -y install apache2 
 
-RUN  DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server 
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server 
+
+RUN apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
+
 
 
 #Set up SSH access
