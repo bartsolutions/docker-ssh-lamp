@@ -1,17 +1,17 @@
 # DEV environment, one image contains all
 version: '2'
 services:
-        docker-ssh-lamp:
-                build: .
-                image: docker-ssh-lamp
-                volumes:
-                  - ./app:/app
-                  - ./mysql:/var/lib/mysql
-                  - ./mysql_log:/var/log/mysql
-                  - ./apache_log:/var/log/apache2
-                ports:
-                  - "2080:80" # Both 2080 and 8000 port are using apache
-                  - "2022:22"
-                  - "2036:3306"
-                container_name: "docker-ssh-lamp"
-                entrypoint: /app/docker_start.sh
+    docker-ssh-lamp:
+        build: .
+        hostname: docker-ssh-lamp
+        image: docker-ssh-lamp
+        volumes:
+          - ./app:/app
+          - ./mysql:/var/lib/mysql
+          - ./var_log:/var/log
+        ports:
+          - "2080:80" # Both 2080 and 8000 port are using apache
+          - "2022:22"
+          - "2036:3306"
+        container_name: "docker-ssh-lamp"
+        entrypoint: /app/docker_start.sh
