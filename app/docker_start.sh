@@ -33,5 +33,7 @@ service mysql status
 service apache2 start
 service apache2 status
 
+mkdir /var/log/supervisor
+
 #MYSQL need to be runned by supervisord
 /usr/bin/supervisord
