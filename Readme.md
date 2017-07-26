@@ -1,4 +1,4 @@
-# A minimal configuration to set up a docker with SSH access + LAMP
+# A minimal configuration to set up a docker with Ubuntu 16.04 + SSH access + LAMP
 ### How to Use:
 1. Modify `Dockerfile` to set up password for SSH
 1. Execute: `docker-compose up -d` (remove `-d` for foreground mode)
