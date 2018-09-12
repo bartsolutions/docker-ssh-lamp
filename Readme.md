@@ -4,3 +4,6 @@
 1. Execute: `docker-compose up -d` (remove `-d` for foreground mode)
 2. Log into server: `ssh root@localhost -p 2022`
 2. Set up root password for mysql: `mysqladmin -u root password '<NEW_PASSWORD>'`
+
+
+Download https://www.phpmyadmin.net/downloads/ into www/html/phpadmin and access with <user> root and <password> NEW_PASSWD
